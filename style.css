@@ -1342,79 +1342,6 @@ body.dark .section-heading h2 {
 
 }
 
-/* ================= MOBILE ================= */
-
-@media (max-width: 850px) {
-
-    .hero {
-
-        min-height: auto;
-
-        margin-top: 68px;
-
-        padding: 70px 6% 60px;
-
-        grid-template-columns: 1fr;
-
-        gap: 45px;
-
-    }
-
-
-    .hero-content {
-
-        padding-left: 0;
-
-    }
-
-
-    .animated-title {
-
-        font-size: clamp(48px, 13vw, 70px);
-
-        letter-spacing: -2px;
-
-    }
-
-
-    .hero-description {
-
-        font-size: 16px;
-
-    }
-     .hero-image {
-    height: 360px;
-    min-height: 0;
-}
-
-}
-
-
-@media (max-width: 500px) {
-
-    .logo {
-
-        font-size: 16px;
-
-        max-width: 220px;
-
-        overflow: hidden;
-
-        text-overflow: ellipsis;
-
-    }
-
-
-    .animated-title {
-
-        font-size: 46px;
-
-    }
-    .hero-image {
-    height: 300px;
-}
-
-}
 
 /* ================= CATALOGUE DOWNLOAD ================= */
 
@@ -2477,6 +2404,271 @@ body.dark .work-card img {
         height: 34px !important;
         padding: 5px 8px !important;
         font-size: 11px !important;
+    }
+
+}
+
+/* =========================================
+   FINAL PHONE ALIGNMENT + SPACING FIX
+========================================= */
+
+@media (max-width: 500px) {
+
+    /* ---------- NAVBAR ---------- */
+
+    .navbar {
+        height: 68px;
+        padding: 0 10px;
+        grid-template-columns: 1fr auto;
+        gap: 5px;
+    }
+
+    .logo {
+        font-size: 13px !important;
+        max-width: none !important;
+        overflow: visible !important;
+        text-overflow: clip !important;
+        white-space: nowrap !important;
+    }
+
+    .nav-buttons {
+        gap: 4px;
+    }
+
+    .nav-buttons button {
+        min-width: 34px;
+        width: auto;
+        height: 34px;
+        padding: 5px 8px;
+        font-size: 11px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+    min-height: auto;
+    margin-top: 68px;
+    padding: 18px 6% 5px;
+    gap: 6px;
+    grid-template-columns: 1fr;
+}
+
+    .hero-content {
+    width: 100%;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 22px 20px !important;
+    border-radius: 14px;
+}
+
+    .hero .small-heading {
+        margin-bottom: 12px;
+    }
+
+.hero .animated-title {
+    font-size: 36px !important;
+    line-height: 0.95 !important;
+    letter-spacing: -2px;
+    margin-bottom: 16px !important;
+}
+
+.hero .hero-description {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    margin-bottom: 16px !important;
+}
+
+    .hero-buttons {
+        gap: 10px;
+    }
+
+    .hero .button {
+        padding: 12px 18px;
+        font-size: 13px;
+    }
+
+
+    /* ---------- HERO IMAGE ---------- */
+
+   .hero-image {
+    width: 100%;
+    height: 180px !important;
+    min-height: 0 !important;
+    border-radius: 14px;
+}
+
+    .hero-image img {
+    width: 62%;
+    height: 94%;
+}
+
+
+    /* ---------- INTRO ---------- */
+
+    .intro {
+        width: 92%;
+        margin: 10px auto !important;
+        padding: 25px 22px !important;
+        gap: 20px;
+        border-radius: 14px;
+    }
+
+    .intro h2 {
+        font-size: 34px;
+        line-height: 1.1;
+    }
+
+
+    /* ---------- CATALOGUE ---------- */
+
+    .catalogue-download {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        margin-top: 5px;
+        transform: none;
+    }
+
+    #catalogueQR {
+        width: 140px;
+        height: 140px;
+    }
+
+    .catalogue-info {
+        max-width: 100%;
+    }
+
+
+    /* ---------- SERVICES ---------- */
+
+    .services {
+        width: 92%;
+        margin: 10px auto !important;
+        padding: 35px 22px !important;
+        border-radius: 14px;
+    }
+
+    .services-heading {
+        margin-bottom: 30px;
+    }
+
+    .services-heading h2 {
+        font-size: 36px;
+    }
+
+    .services-grid {
+        gap: 15px;
+    }
+
+    .service-card {
+        padding: 25px;
+    }
+
+    .service-number {
+        margin-bottom: 30px;
+    }
+
+    .service-content h3 {
+        font-size: 28px;
+        min-height: 0;
+    }
+
+    .service-content p {
+        min-height: 0;
+        font-size: 15px;
+    }
+
+
+    /* ---------- OUR WORK ---------- */
+
+    .work {
+        width: 92%;
+        margin: 10px auto 20px !important;
+        padding: 30px 22px !important;
+        border-radius: 14px;
+    }
+
+    .section-heading {
+        margin-bottom: 25px;
+    }
+
+    .section-heading h2 {
+        font-size: 36px;
+    }
+
+    .work-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .work-card {
+        height: 220px !important;
+    }
+
+
+    /* ---------- CONTACT ---------- */
+
+    .contact {
+        width: 92%;
+        margin: 10px auto 25px !important;
+        padding: 30px 22px !important;
+        border-radius: 14px;
+    }
+
+    .contact h2 {
+        font-size: 38px;
+        margin-bottom: 25px;
+    }
+
+    .contact-card {
+        width: 100%;
+        margin-right: 0;
+        padding: 18px 0;
+        gap: 12px;
+    }
+
+    .contact-card > div {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .contact-card strong {
+        display: block;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+        width: 92%;
+        margin: 25px auto 15px;
+        padding: 30px 15px;
+    }
+
+
+    /* ---------- CHATBOT ---------- */
+
+    .chatbot {
+        width: 48px !important;
+        height: 48px !important;
+        right: 12px !important;
+        bottom: 12px !important;
+    }
+
+    .chatbot-button {
+        width: 48px !important;
+        height: 48px !important;
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+
+    .chatbot-button img {
+        width: 48px !important;
+        height: 48px !important;
     }
 
 }
