@@ -14,10 +14,18 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #f5f3ef;
     color: #1c1c1c;
     line-height: 1.6;
     transition: 0.3s ease;
+
+    background-image:
+        linear-gradient(rgba(255,255,255,0.35), rgba(255,255,255,0.35)),
+        url('images/work-bg.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 a {
@@ -139,23 +147,17 @@ button {
 /* ================= HERO ================= */
 
 .hero {
-
     min-height: calc(100vh - 75px);
-
     margin-top: 75px;
-
-    padding: 40px 6%;
-
+    padding: 45px 6%;
+    
     display: grid;
-
-    grid-template-columns: 0.95fr 1.05fr;
-
+    grid-template-columns: 1fr 1fr;
     gap: 55px;
-
-    align-items: center;
-
-    background: #f5f3ef;
-
+    
+    align-items: stretch;
+    
+    background: transparent;
     overflow: hidden;
 }
 
@@ -328,32 +330,27 @@ button {
 
 .hero-image {
     width: 100%;
-    height: 500px;
+    height: 560px;
+
     position: relative;
     overflow: hidden;
 
-    background: #e8e5df;
+    border-radius: 18px;
 
-    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.25);
 
-    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
 
 .hero-image img {
-    width: 100%;
-    height: 100%;
-    display: block;
-
+    width: 55%;
+    height: 90%;
     object-fit: contain;
-    object-position: center;
-
-    background: #e8e5df;
-
-    transition: transform 0.8s ease;
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.3s ease;
 }
-
-
 .hero-image:hover img {
 
     transform: scale(1.03);
@@ -410,8 +407,19 @@ button {
 
 
 .hero-content {
-    max-width: 650px;
-    padding-left: 3%;
+    width: 100%;
+    height: 560px;
+    
+    padding: 55px;
+    
+    background: rgba(255, 255, 255, 0.90);
+    border-radius: 18px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
 }
 
 
@@ -487,12 +495,16 @@ button {
 .intro {
     width: 86%;
     max-width: 1200px;
-    margin: auto;
-    padding: 65px 0 80px;
+    margin: 40px auto;
+    padding: 20px 55px;
+    
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 70px;
+    gap: 50px;
     align-items: center;
+
+    background: rgba(255, 255, 255, 0.90);
+    border-radius: 18px;
 }
 
 
@@ -633,10 +645,29 @@ button {
 ========================================= */
 
 .work {
+    position: relative;
+
     width: 86%;
     max-width: 1200px;
-    margin: auto;
-    padding: 45px 0 20px;
+
+    margin: 20px auto 60px;
+    padding: 45px;
+
+    background: rgba(255, 255, 255, 0.90);
+
+    border-radius: 18px;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.10);
+}
+
+.work .small-heading {
+    color: #a35b2a;
+    text-shadow: none;
+}
+
+.work .section-heading h2 {
+    color: #171717;
+    text-shadow: none;
 }
 
 
@@ -653,10 +684,16 @@ button {
 
 
 .section-heading h2 {
-
-    font-family: Georgia, serif;
-
+    font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(32px, 4vw, 55px);
+    line-height: 1.05;
+    color: #171717;
+}
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: 40px;
 }
 
 
@@ -696,10 +733,14 @@ button {
 /* ================= WORK GRID ================= */
 
 .work-grid {
+    position: relative;
+    z-index: 2;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 22px;
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 
@@ -707,26 +748,33 @@ button {
     position: relative;
     height: 240px;
     overflow: hidden;
-    background: #fff;
-    border-radius: 6px;
+
+    border-radius: 12px;
+
+    background: transparent;
+
+    box-shadow: none;
 }
 
 .work-card img {
     width: 100%;
     height: 100%;
-    display: block;
+
     object-fit: contain;
     object-position: center;
-    background: #fff;
-}
 
+    display: block;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition: transform 0.4s ease;
+}
 
 .work-card:hover img {
-    transform: scale(1.04);
+    transform: scale(1.05);
 }
-
-
-
 
 /* =========================================
    CATALOGUE
@@ -827,8 +875,15 @@ button {
 .contact {
     width: 86%;
     max-width: 1200px;
-    margin: auto;
-    padding: 40px 0 70px;
+
+    margin: 20px auto 60px;
+    padding: 45px;
+
+    background: rgba(255, 255, 255, 0.90);
+
+    border-radius: 18px;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.10);
 }
 
 
@@ -897,18 +952,13 @@ button {
 
 
 .contact-card small {
-
     display: block;
-
     font-size: 10px;
-
     letter-spacing: 2px;
-
-    color: #888;
-
+    color: #555;
+    font-weight: bold;
     margin-bottom: 3px;
 }
-
 
 .contact-card strong {
 
@@ -955,9 +1005,11 @@ footer p {
 ========================================= */
 
 body.dark {
-
-    background: #111;
-
+    background-image: url('images/work-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     color: #eee;
 }
 
@@ -1069,6 +1121,17 @@ body.dark footer h3 {
     color: white;
 }
 
+body.dark .work {
+    background: rgba(0, 0, 0, 0.45);
+}
+
+body.dark .work-card {
+    background: #1c1a17;
+}
+
+body.dark .section-heading h2 {
+    color: white;
+}
 
 /* =========================================
    MOBILE
@@ -1363,9 +1426,15 @@ body.dark footer h3 {
 }
 
 #catalogueQR {
+    width: 150px;
+    height: 150px;
     background: white;
     padding: 10px;
     border: 1px solid #ddd;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .catalogue-info {
@@ -1479,8 +1548,11 @@ body.dark footer h3 {
 .services {
     width: 86%;
     max-width: 1200px;
-    margin: auto;
-    padding: 65px 0 100px;
+    margin: 20px auto 40px;
+    padding: 45px 45px 50px;
+
+    background: rgba(255, 255, 255, 0.88);
+    border-radius: 18px;
 }
 
 .services-heading {
@@ -1509,7 +1581,7 @@ body.dark footer h3 {
     min-height: 330px;
     padding: 40px;
 
-    background: white;
+    background: #ffffff;
     border: 1px solid #ddd;
     color: #1c1c1c;
 
@@ -1770,5 +1842,137 @@ body.dark .service-content span {
         top: 15px;
         right: 15px;
     }
+}
 
+@media (max-width: 850px) {
+    body,
+    .hero,
+    .work {
+        background-attachment: scroll;
+    }
+    .work {
+        padding: 70px 6% 70px;
+    }
+    .work-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    .work-card {
+        height: 260px;
+    }
+}
+
+section {
+    scroll-margin-top: 90px;
+}
+
+
+footer {
+    width: 86%;
+    max-width: 1200px;
+    margin: 60px auto 30px;
+    padding: 40px 20px;
+    
+    background: rgba(255, 255, 255, 0.92);
+    
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+@media (max-width: 850px) {
+
+    .hero-content {
+        padding: 35px;
+    }
+
+    .intro,
+    .services,
+    .work,
+    .contact {
+        width: 90%;
+        padding: 35px;
+        margin: 20px auto;
+    }
+
+    .intro {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .work-card {
+        height: 280px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .hero-content {
+        padding: 25px;
+    }
+
+    .intro,
+    .services,
+    .work,
+    .contact {
+        width: 92%;
+        padding: 25px;
+        border-radius: 14px;
+    }
+
+    .work-card {
+    height: 300px;
+}
+
+    .catalogue-download {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* =========================================
+   DARK MODE CONTENT BOXES
+========================================= */
+
+body.dark .work,
+body.dark footer {
+    background: rgba(25, 25, 25, 0.94);
+    color: white;
+}
+
+body.dark .work .small-heading {
+    color: #d79562;
+}
+
+body.dark .work .section-heading h2 {
+    color: white;
+}
+
+body.dark .hero-content {
+    background: rgba(25, 25, 25, 0.92);
+    color: white;
+}
+
+body.dark .work-card,
+body.dark .work-card img {
+    background: #ffffff;
+}
+
+/* ================= CONTACT SECTION FIX ================= */
+
+.contact {
+    width: 86%;
+    max-width: 1200px;
+
+    margin: 20px auto 60px;
+    padding: 45px;
+
+    background: rgba(255, 255, 255, 0.90);
+
+    border-radius: 18px;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.10);
 }

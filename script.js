@@ -293,3 +293,34 @@ document.addEventListener("keydown", function (event) {
     }
 
 });
+
+/* ================= HERO IMAGE CLICK SLIDER ================= */
+
+const heroImage = document.getElementById("heroImage");
+
+const heroImages = [
+    "images/cnc/img1.jpeg",
+    "images/cnc/img2.jpeg",
+    "images/cnc/img3.jpeg",
+    "images/cnc/img4.jpeg",
+    "images/cnc/img5.jpeg",
+    "images/cnc/img6.jpeg"
+];
+
+let heroImageIndex = 0;
+
+if (heroImage) {
+
+    heroImage.addEventListener("click", function () {
+
+        heroImageIndex++;
+
+        if (heroImageIndex >= heroImages.length) {
+            heroImageIndex = 0;
+        }
+
+        heroImage.src = heroImages[heroImageIndex];
+
+    });
+
+}
