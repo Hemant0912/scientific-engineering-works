@@ -2308,7 +2308,7 @@ body.dark .work-card img {
 
     /* KEEP BACKGROUND IMAGE ON MOBILE */
     body {
-        background-image: url("images/scientific/work-bg.jpg");
+        background-image: url("images/work-bg.jpg");
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -2340,18 +2340,30 @@ body.dark .work-card img {
         margin-right: auto;
         overflow: hidden;
     }
+   
+    /* EMAIL MUST STAY INSIDE CONTACT CARD */
 
+.contact-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
 
-    /* EMAIL MUST WRAP */
-    .contact-item a,
-    .contact-item p,
-    .contact-item strong {
-        max-width: 100%;
-        overflow-wrap: anywhere;
-        word-break: break-word;
-    }
+.contact-card > div {
+    flex: 1;
+    min-width: 0;
+    max-width: 100%;
+}
 
-
+.contact-card strong {
+    display: block;
+    max-width: 100%;
+    min-width: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
     /* EMAIL TEXT */
     .contact-item {
         min-width: 0;
@@ -2416,4 +2428,55 @@ body.dark .work-card img {
         right: 15px;
         bottom: 70px;
     }
+}
+
+/* ================= FINAL MOBILE FIX ================= */
+
+@media (max-width: 600px) {
+
+    .chatbot {
+        width: 48px !important;
+        height: 48px !important;
+        right: 12px !important;
+        bottom: 12px !important;
+    }
+
+    .chatbot-button {
+        width: 48px !important;
+        height: 48px !important;
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+
+    .chatbot-button img {
+        width: 48px !important;
+        height: 48px !important;
+    }
+}
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 12px !important;
+        grid-template-columns: 1fr auto !important;
+    }
+
+    .logo {
+        font-size: 13px !important;
+        max-width: none !important;
+        overflow: visible !important;
+        text-overflow: clip !important;
+        white-space: nowrap !important;
+    }
+
+    .nav-buttons {
+        gap: 4px !important;
+    }
+
+    .nav-buttons button {
+        min-width: 34px !important;
+        height: 34px !important;
+        padding: 5px 8px !important;
+        font-size: 11px !important;
+    }
+
 }
