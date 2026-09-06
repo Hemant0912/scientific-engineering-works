@@ -2670,5 +2670,233 @@ body.dark .work-card img {
         width: 48px !important;
         height: 48px !important;
     }
+}
 
+/* =========================================
+   FINAL DARK MODE FIX
+   ========================================= */
+
+/* PAGE BACKGROUND */
+body.dark {
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.72),
+            rgba(0, 0, 0, 0.72)
+        ),
+        url('images/work-bg.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    color: #eeeeee;
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+body.dark .hero-content {
+    background: rgba(25, 25, 25, 0.94);
+    color: white;
+}
+
+body.dark .hero .animated-title span {
+    color: white !important;
+}
+
+body.dark .hero .hero-description {
+    color: #cccccc !important;
+}
+
+body.dark .hero .secondary {
+    color: white !important;
+    border-color: #777 !important;
+    background: transparent;
+}
+
+
+/* =========================================
+   INTRO / TWO SPECIALITIES
+   ========================================= */
+
+body.dark .intro {
+    background: rgba(25, 25, 25, 0.94);
+    color: white;
+}
+
+body.dark .intro h2 {
+    color: white !important;
+}
+
+body.dark .intro .small-heading {
+    color: #d79562;
+}
+
+body.dark .catalogue-info strong {
+    color: white;
+}
+
+body.dark .catalogue-info p {
+    color: #cccccc !important;
+}
+
+
+/* =========================================
+   SERVICES
+   ========================================= */
+
+body.dark .services {
+    background: rgba(25, 25, 25, 0.94);
+    color: white;
+}
+
+body.dark .services-heading h2 {
+    color: white !important;
+}
+
+body.dark .services-heading .small-heading {
+    color: #d79562;
+}
+
+body.dark .service-card {
+    background: #1b1b1b;
+    border-color: #3a3a3a;
+    color: white;
+}
+
+body.dark .service-content h3 {
+    color: white !important;
+}
+
+body.dark .service-content p {
+    color: #cccccc !important;
+}
+
+body.dark .service-content span {
+    color: #d79562;
+}
+
+
+/* =========================================
+   OUR WORK
+   ========================================= */
+
+body.dark .work {
+    background: rgba(25, 25, 25, 0.94);
+    color: white;
+}
+
+body.dark .work .section-heading h2 {
+    color: white !important;
+}
+
+body.dark .work .small-heading {
+    color: #d79562;
+}
+
+
+/* =========================================
+   CONTACT
+   ========================================= */
+
+body.dark .contact {
+    background: rgba(25, 25, 25, 0.94);
+    color: white;
+}
+
+body.dark .contact h2 {
+    color: white !important;
+}
+
+body.dark .contact .small-heading {
+    color: #d79562;
+}
+
+body.dark .contact-grid {
+    border-color: #444;
+}
+
+body.dark .contact-card {
+    color: white;
+    border-color: #444;
+}
+
+body.dark .contact-card small {
+    color: #bbbbbb;
+}
+
+body.dark .contact-card strong {
+    color: white;
+}
+
+body.dark .contact-card > span {
+    color: white;
+    border-color: #555;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+body.dark footer {
+    background: rgba(25, 25, 25, 0.94);
+    color: #bbbbbb;
+    border-color: #444;
+}
+
+body.dark footer h3 {
+    color: white;
+}
+
+body.dark footer p,
+body.dark footer small {
+    color: #bbbbbb;
+}
+
+
+/* =========================================
+   CATALOGUE QR
+   ========================================= */
+
+body.dark #catalogueQR {
+    background: white;
+    border-color: #555;
+}
+
+
+/* =========================================
+   CHATBOT
+   ========================================= */
+
+body.dark .chatbot-box {
+    background: #1b1b1b;
+    color: white;
+}
+
+body.dark .chat-messages {
+    background: #1b1b1b;
+}
+
+body.dark .chatbot-input {
+    background: #222;
+}
+
+body.dark .chatbot-input input {
+    background: #111;
+    color: white;
+    border-color: #444;
+}
+
+body.dark .chatbot-input input::placeholder {
+    color: #888;
+}
+
+body.dark .chatbot-quick-buttons button {
+    background: #222;
+    color: white;
+    border-color: #444;
 }
