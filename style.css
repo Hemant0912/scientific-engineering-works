@@ -2301,3 +2301,119 @@ body.dark .work-card img {
     }
 
 }
+
+/* ================= MOBILE RESPONSIVE FIX ================= */
+
+@media (max-width: 768px) {
+
+    /* KEEP BACKGROUND IMAGE ON MOBILE */
+    body {
+        background-image: url("images/scientific/work-bg.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+
+
+    /* PREVENT CONTENT FROM GOING OUTSIDE SCREEN */
+    * {
+        box-sizing: border-box;
+    }
+
+
+    /* MAIN CONTENT WIDTH */
+    .container {
+        width: 92%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* CONTACT WHITE BOX */
+    .contact-box,
+    .contact-container {
+        width: 92%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+    }
+
+
+    /* EMAIL MUST WRAP */
+    .contact-item a,
+    .contact-item p,
+    .contact-item strong {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+
+    /* EMAIL TEXT */
+    .contact-item {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+
+    /* HERO SECTION */
+    .hero {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    /* HERO WHITE BOXES */
+    .hero-content,
+    .hero-image-box {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* HERO TITLE */
+    .hero h1 {
+        font-size: 52px;
+        line-height: 0.95;
+    }
+
+
+    /* HERO DESCRIPTION */
+    .hero p {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+
+    /* BUTTONS */
+    .hero-buttons {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+
+    /* CHATBOT */
+    .chatbot {
+        width: 45px;
+        height: 45px;
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .chatbot img {
+        width: 45px;
+        height: 45px;
+    }
+
+
+    /* CHATBOT MESSAGE */
+    .chatbot-hint {
+        max-width: 220px;
+        font-size: 14px;
+        right: 15px;
+        bottom: 70px;
+    }
+}
