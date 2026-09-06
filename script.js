@@ -324,3 +324,213 @@ if (heroImage) {
     });
 
 }
+
+/* ================= CHATBOT ================= */
+
+const chatbotButton = document.getElementById("chatbotButton");
+const chatbotBox = document.getElementById("chatbotBox");
+const closeChatbot = document.getElementById("closeChatbot");
+const sendChat = document.getElementById("sendChat");
+const chatInput = document.getElementById("chatInput");
+const chatMessages = document.getElementById("chatMessages");
+
+
+/* OPEN CHATBOT */
+
+chatbotButton.addEventListener("click", function () {
+
+    chatbotBox.classList.toggle("active");
+
+});
+
+
+/* CLOSE CHATBOT */
+
+closeChatbot.addEventListener("click", function () {
+
+    chatbotBox.classList.remove("active");
+
+});
+
+
+/* SEND MESSAGE */
+
+function sendMessage() {
+
+    const message = chatInput.value.trim();
+
+    if (message === "") {
+        return;
+    }
+
+    /* USER MESSAGE */
+
+    const userMessage = document.createElement("div");
+
+    userMessage.className = "user-message";
+
+    userMessage.textContent = message;
+
+    chatMessages.appendChild(userMessage);
+
+
+    /* BOT RESPONSE */
+
+    let response =
+        "Thank you for your message. Please contact us on WhatsApp at +91 98392 64847 for more details.";
+
+
+    const lowerMessage = message.toLowerCase();
+
+
+    if (
+        lowerMessage.includes("cnc") ||
+        lowerMessage.includes("cutting") ||
+        lowerMessage.includes("design")
+    ) {
+
+        response =
+            "We provide custom CNC design and cutting work, including decorative panels, religious artwork, architectural designs and detailed relief work.";
+
+    }
+
+
+    else if (
+        lowerMessage.includes("scientific") ||
+        lowerMessage.includes("apparatus")
+    ) {
+
+        response =
+            "We provide scientific apparatus for schools, colleges and educational institutions.";
+
+    }
+
+
+    else if (
+        lowerMessage.includes("whatsapp") ||
+        lowerMessage.includes("contact") ||
+        lowerMessage.includes("number")
+    ) {
+
+        response =
+            "You can contact us on WhatsApp at +91 98392 64847.";
+
+    }
+
+
+    else if (
+        lowerMessage.includes("catalogue") ||
+        lowerMessage.includes("catalog")
+    ) {
+
+        response =
+            "You can view our catalogue using the Catalogue button on the website.";
+
+    }
+
+
+    else if (
+        lowerMessage.includes("website") ||
+        lowerMessage.includes("web")
+    ) {
+
+        response =
+            "This website provides information about our CNC design work and scientific engineering services.";
+
+    }
+
+
+    const botMessage = document.createElement("div");
+
+    botMessage.className = "bot-message";
+
+    botMessage.textContent = response;
+
+    chatMessages.appendChild(botMessage);
+
+
+    /* CLEAR INPUT */
+
+    chatInput.value = "";
+
+
+    /* SCROLL TO BOTTOM */
+
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+
+}
+
+
+/* SEND BUTTON */
+
+sendChat.addEventListener("click", function () {
+
+    sendMessage();
+
+});
+
+
+/* ENTER KEY */
+
+chatInput.addEventListener("keydown", function (event) {
+
+    if (event.key === "Enter") {
+
+        sendMessage();
+
+    }
+
+});
+
+
+/* QUICK BUTTON */
+
+function sendQuickMessage(message) {
+
+    chatInput.value = message;
+
+    sendMessage();
+
+}
+
+
+/* ================= CHATBOT HELP MESSAGE ================= */
+
+/* Create small message near robot */
+
+const chatbotHint = document.createElement("div");
+
+chatbotHint.className = "chatbot-hint";
+
+chatbotHint.textContent = "How can I help or assist you?";
+
+document.querySelector(".chatbot").appendChild(chatbotHint);
+
+
+/* Show message */
+
+function showChatbotHint() {
+
+    chatbotHint.classList.add("show");
+
+    setTimeout(function () {
+
+        chatbotHint.classList.remove("show");
+
+    }, 4000);
+
+}
+
+
+/* Show immediately */
+
+showChatbotHint();
+
+
+/* Show again every 10 seconds */
+
+setInterval(function () {
+
+    showChatbotHint();
+
+}, 10000);

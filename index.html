@@ -445,9 +445,8 @@
 </a>
 
           <!-- WHATSAPP -->
-
 <a
-    href="https://wa.me/919839264847?text=Hello%2C%20I%20am%20interested%20in%20your%20services.%20Please%20share%20more%20details."
+    href="https://wa.me/919839264847?text=Hello%2C%20I%20am%20interested%20in%20your%20services."
     target="_blank"
     class="contact-card">
 
@@ -474,7 +473,8 @@
 <!-- EMAIL -->
 
 <a
-    href="mailto:scientificworksvaranasi@gmail.com"
+    href="https://mail.google.com/mail/?view=cm&fs=1&to=scientificworksvaranasi@gmail.com"
+target="_blank"
     class="contact-card">
 
     <span>✉</span>
@@ -644,6 +644,68 @@
 
 </div>
 
+<!-- ================= CHATBOT ================= -->
+
+<div class="chatbot">
+
+    <button id="chatbotButton" class="chatbot-button">
+    <img src="chatbot.png" alt="Chatbot">
+</button>
+
+    <div id="chatbotBox" class="chatbot-box">
+
+        <div class="chatbot-header">
+            <div>
+                <strong>The Scientific Engineering Works</strong>
+                <small>How can we help you?</small>
+            </div>
+
+            <button id="closeChatbot">×</button>
+        </div>
+
+        <div id="chatMessages" class="chat-messages">
+
+            <div class="bot-message">
+                Hello! 👋<br><br>
+                I can help you with CNC design, scientific apparatus,
+                catalogue, contact details and more.
+            </div>
+
+        </div>
+
+        <div class="chatbot-quick-buttons">
+
+            <button onclick="sendQuickMessage('What services do you provide?')">
+                Our Services
+            </button>
+
+            <button onclick="sendQuickMessage('I want CNC work')">
+                CNC Work
+            </button>
+
+            <button onclick="sendQuickMessage('What is your WhatsApp number?')">
+                WhatsApp
+            </button>
+
+        </div>
+
+        <div class="chatbot-input">
+
+            <input
+                type="text"
+                id="chatInput"
+                placeholder="Ask something..."
+            >
+
+            <button id="sendChat">
+                ➤
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script src="script.js"></script>
